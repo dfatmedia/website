@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem; /* Optional: Adjust spacing between spans */
+    margin:3rem;
+
+    
+      opacity: 0;
+      transform: translateY(80px); /* Start position: 30px down */
+      transition: all 0.6s ease-out;
+
+  }
+  .container.visible {
+    opacity: 1;
+    transform: translateY(0); /* End position: Original place */
+  }
+
+
+.container span {
+    flex: 1; /* Ensures equal partition */
+    text-align:start; /* Centers the content within each span */
+    padding: 1rem; /* Adds some padding for aesthetic purposes */
+    
+    
+  }
+  
+  .container span h1 {
+    font-size: 4rem;
+    margin: 0; 
+    
+
+  }
+  
+  .container span p {
+    font-size: 1.1rem;
+    line-height: 1.6; /* Adjust the value as needed */
+
+    margin: 3rem;
+    color: #555;
+  }
+
+  .home {
+    max-width: 100%;
+    overflow: hidden; /* Ensures no overflow on small screens */
+  }
+
+  .home-image1 {
+    width: 100%; /* Make the image take up the full width of the screen */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any inline gap from images */
+  }

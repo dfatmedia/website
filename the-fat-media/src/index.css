@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Volksans';
+  src: url('./assets/fonts/volksansTest-Light-BF63eee6e34a6ac.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Volksans', sans-serif;
+  background-color: #ffffff; /* Light background for contrast */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure the body fits within the viewport */
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

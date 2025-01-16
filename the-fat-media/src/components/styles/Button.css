@@ -1,0 +1,21 @@
+.navbar-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #213349; /* Your specified color */
+    border: none;
+    border-radius: 30px; /* Rounded button for a modern look */
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-button button:hover {
+    background-color: #425574; /* A slightly lighter shade for hover effect */
+  }
+  @media (max-width: 768px) {
+    .custom-button {
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+      font-size: 14px; /* Reduce font size for mobile */
+    }
+}
