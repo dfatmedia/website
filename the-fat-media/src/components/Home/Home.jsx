@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import './styles/Home.css'
-import Navbar from './Navbar';
-import Button from './Button';
+import './Home.css'
+import Navbar from '../Navbar/Navbar';
+import Button from '../Button/Button';
 
 const Home = () => {
     const [isVisible, setIsVisible] = useState(false);
