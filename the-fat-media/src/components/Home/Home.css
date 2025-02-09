@@ -1,89 +1,101 @@
+/* Main Container */
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 1rem; /* Optional: Adjust spacing between spans */
-    margin:3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  margin: 3rem auto;
+  text-align: left;
+}
 
-    
-      opacity: 0;
-      transform: translateY(80px); /* Start position: 30px down */
-      transition: all 0.6s ease-out;
+/* Left Section */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
 
-  }
-  .container.visible {
-    opacity: 1;
-    transform: translateY(0); /* End position: Original place */
+/* Right Section */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+/* "Creative" with Image */
+.text-image-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* Space between text and image */
+}
+
+/* H1 Size */
+.text-image-row h1, 
+.left-section .large-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Wider Cylindrical Image */
+.image-container0 img {
+  width: 8rem;  
+  height: 4rem; 
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+/* Paragraph */
+.right-section p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 90%;
+}
+
+/* Button */
+.button-container {
+  margin-top: 10px;
+}
+
+/* Large Image */
+.image-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.home-image1 {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Faster, Overlapping Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Faster speed */
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
   }
 
-
-.container span {
-    flex: 1; /* Ensures equal partition */
-    text-align:start; /* Centers the content within each span */
-    padding: 1rem; /* Adds some padding for aesthetic purposes */
-    
-    
+  .right-section p {
+      max-width: 100%;
   }
-  
-  .container span h1 {
-    font-size: 4rem;
-    margin: 0; 
-    
-
-  }
-  
-  .container span p {
-    font-size: 1.1rem;
-    line-height: 1.6; /* Adjust the value as needed */
-
-    margin: 3rem;
-    color: #555;
-  }
-
-  .home {
-    max-width: 100%;
-    overflow: hidden; /* Ensures no overflow on small screens */
-  }
-
-  .home-image1 {
-    width: 100%; /* Make the image take up the full width of the screen */
-    height: auto; /* Maintain the aspect ratio */
-    display: block; /* Remove any inline gap from images */
-  }
-
-  body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-  
-  .stack-container {
-    position: relative;
-    width: 100%;
-  }
-  
-  .image-section {
-    position: relative;
-    height: 100vh; /* Full height of the viewport */
-    overflow: hidden;
-  }
-  
-  .image-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire area */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Places the image behind the content */
-  }
-  
-  .content-section {
-    background-color: #ffffff; /* Background for the content section */
-    padding: 50px 20px;
-    position: relative;
-    z-index: 1; /* Ensures the content appears above the image */
-    margin-top: -100vh; /* Stacks content over the image */
-  }
-  
+}

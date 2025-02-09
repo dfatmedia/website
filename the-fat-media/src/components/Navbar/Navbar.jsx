@@ -49,7 +49,7 @@ const Navbar = () => {
        <div
         className={`navbar-gradient ${menuOpen ? 'open' : ''}`}
         onClick={closeMenu}
-      ></div>
+      ></div> 
 
   </nav>
   
